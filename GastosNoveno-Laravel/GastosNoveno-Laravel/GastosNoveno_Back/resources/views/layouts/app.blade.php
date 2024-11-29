@@ -19,7 +19,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body style="background-color: #f8f9fa;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -76,12 +76,16 @@
         </nav>
 
         <main class="py-4">
+            <div class="container text-center">
+                <h1>Bienvenido a {{ config('app.name', 'Laravel') }}</h1>
+                <p>Este es el contenido predeterminado de la página principal.</p>
+            </div>
             @yield('content')
         </main>
 
         <!-- Footer -->
-        <footer class="text-center py-3 bg-light">
-            <p>&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. All rights reserved.</p>
+        <footer class="text-center py-3" style="background-color: #343a40; color: white;">
+            <p>&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</p>
         </footer>
     </div>
 </body>
